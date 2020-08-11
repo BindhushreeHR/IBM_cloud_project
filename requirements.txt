@@ -1,0 +1,6 @@
+Flask>=1.0.0
+cloudant==2.13.0
+ibm-db
+numpy
+timezonefinder==1.5.3
+pytz==2019.1

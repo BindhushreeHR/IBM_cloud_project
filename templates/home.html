@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h2>Bindhu Shree Hadya Ravi</h2>
+<h2>1001699836</h2>
+<h4>Displaying complete content!!.</h4>
+{% for rows in data %}
+<table border=1>
+<tr>
+    <td>{{ rows["name"] }}</td>
+<td>{{ rows["salary"] }}</td>
+<td>{{ rows["room"] }}</td>
+<td>{{ rows["telnum"] }}</td>
+<td>{{ rows["keywords"] }}</td>
+    <td><img src="http://s3.us-east.cloud-object-storage.appdomain.cloud/cloud-object-storage-9d-cos-standard-v26/{{ rows["picture"] }}" alt="No Picture Available" height="100px" width="100px"></td>
+</tr>
+</table>
+{% endfor %}
+<br>
+
+<h4>***** Displaying by Names *****</h4>
+<h5>* Names must start with a capital letter (example : Chris)</h5>
+<h5>Enter the person name you wanna search</h5>
+<form action="/findRoom" method="POST">
+    Name:<input type="text" name="name">
+    <input type="submit" value="Submit"><br><br>
+</form>
+<br>
+
+<h4>***** Displaying by Salary *****</h4>
+<h5>Enter the salary</h5>
+<form action="/salaryLessThan" method="POST">
+    Salary:<input type="text" name="salary">
+    <input type="submit" value="Submit"><br><br>
+</form>
+
+<br>
+<h4>***** Add Picture *****</h4>
+<h5>Enter the name of the person</h5>
+<h5>* Names must start with a capital letter (example : Chris)</h5>
+<form action="/addPicture" method="POST">
+    Name:<input type="text" name="upname">
+    Picture:<input type="text" name="picture">
+    <input type="submit" value="Submit"><br><br>
+</form>
+<br>
+
+<br>
+<h4>***** Remove record using Name *****</h4>
+<h5>Enter the name of the person</h5>
+<h5>* Names must start with a capital letter (example : Dave)</h5>
+<form action="/removeRecord" method="POST">
+    Name:<input type="text" name="upname">
+    <input type="submit" value="Submit"><br><br>
+</form>
+<br>
+
+<h4>***** Update Keyword *****</h4>
+<form action="/updateKeywords" method="POST">
+<h5>* Names must start with a capital letter (example : Chris)</h5>
+Name:<input type="text" name="upname1">
+Keyword:<input type="text" name="upkey">
+<input type="submit" value="Submit"><br><br>
+</form>
+<br>
+
+
+<h4>***** Change Salary *****</h4>
+<form action="/changeSalary" method="POST">
+<h5>* Names must start with a capital letter (example : Chris)</h5>
+Name:<input type="text" name="upname">
+Salary:<input type="text" name="salary">
+<input type="submit" value="Submit"><br><br>
+</form>
+<br>
+
+</body>
+</html>

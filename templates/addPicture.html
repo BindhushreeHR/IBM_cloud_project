@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<h3>Bindhu Shree Hadya Ravi</h3>
+<h3>1001699836</h3>
+<h2>Updated the picture....</h2>
+{% for rows in data %}
+<table border=1>
+<tr>
+<td>{{ rows["name"] }}</td>
+	<td><img src="http://s3.us-east.cloud-object-storage.appdomain.cloud/cloud-object-storage-9d-cos-standard-v26/{{ rows["picture"] }}" alt="No Picture Available" height="100px" width="100px"></td>
+</tr>
+</table>
+{% endfor %}
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<h3>1001699836</h3>
+<h3>Bindhu Shree Hadya Ravi</h3>
+<h4>Displaying the changed salary</h4>
+{% for rows in data %}
+<table border=1>
+<tr>
+<td>{{ rows["name"] }}</td>
+<td>{{ rows["salary"] }}</td>
+</tr>
+</table>
+{% endfor %}
+</body>
+</html>	
